@@ -1,0 +1,131 @@
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    /* Ensure rank ribbon stays inside */
+}
+
+.cardContent {
+    display: grid;
+    grid-template-columns: 60px 100px 1fr;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    gap: 1.5rem;
+}
+
+/* Rank Styling */
+.rankNumber {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Rank 1 Special Styling */
+.rank1 {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    position: relative;
+}
+
+.rank1::after {
+    content: 'TOP PICK';
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background: #ffd700;
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: 900;
+    padding: 2px 25px;
+    transform: rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rank1 .rankNumber {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Image */
+.imageWrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Info */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.count {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rank1:hover {
+    border-color: #ffd700;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, transparent 100%);
+}

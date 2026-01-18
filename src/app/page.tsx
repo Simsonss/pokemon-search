@@ -1,8 +1,16 @@
 import SearchInput from "@/components/SearchInput";
 import PokemonResult from "@/components/PokemonResult";
+import TopPicks from "@/components/TopPicks";
 import { Suspense } from "react";
 
-export default function Home() {
+interface HomeProps {
+  searchParams: Promise<{ name?: string }>;
+}
+
+export default async function Home(props: HomeProps) {
+  const searchParams = await props.searchParams;
+  const name = searchParams.name;
+
   return (
     <main className="container">
        <h1 style={{
@@ -20,9 +28,15 @@ export default function Home() {
          <SearchInput />
        </Suspense>
 
-       <Suspense fallback={<div className="loading">Loading Result...</div>}>
-         <PokemonResult />
-       </Suspense>
+       <div style={{width: '100%', marginTop: '2rem'}}>
+          {name ? (
+             <Suspense fallback={<div className="loading">Loading Result...</div>}>
+               <PokemonResult />
+             </Suspense>
+          ) : (
+             <TopPicks />
+          )}
+       </div>
     </main>
   );
 }
