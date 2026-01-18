@@ -1,0 +1,52 @@
+[
+  {
+    "id": "001",
+    "name": "Bulbasaur",
+    "searchCount": 2000
+  },
+  {
+    "id": "002",
+    "name": "Ivysaur",
+    "searchCount": 1500
+  },
+  {
+    "id": "003",
+    "name": "Venusaur",
+    "searchCount": 1000
+  },
+  {
+    "id": "004",
+    "name": "Charmander",
+    "searchCount": 500
+  },
+  {
+    "id": "005",
+    "name": "Charmeleon",
+    "searchCount": 300
+  },
+  {
+    "id": "006",
+    "name": "Charizard",
+    "searchCount": 200
+  },
+  {
+    "id": "007",
+    "name": "Squirtle",
+    "searchCount": 100
+  },
+  {
+    "id": "008",
+    "name": "Wartortle",
+    "searchCount": 50
+  },
+  {
+    "id": "009",
+    "name": "Blastoise",
+    "searchCount": 25
+  },
+  {
+    "id": "010",
+    "name": "Caterpie",
+    "searchCount": 10000
+  }
+]
